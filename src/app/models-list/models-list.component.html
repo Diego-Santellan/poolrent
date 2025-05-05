@@ -1,0 +1,50 @@
+<h1>lista de modelos</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Modelo</th>
+            <th>Dimenciones</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Compra/u</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (models of modelos; track models.modelo){
+
+        <!-- directivas-Estructurales:(ngFor) este caso es para remplazar el foreach -->
+        <tr [ngClass]="{'promo': models.promo}">
+            <!-- ngClass, para cuando se comple una condicion (models.promo = true), se le agrega una clase y con eso se le dan estilos -->
+            <td><img width="150" class="img-thumbnail" [src]="models.image" [alt]="models.image" /></td>
+            <td>{{models.modelo}}</td>
+            <td>{{models.dimenciones}}</td>
+            <td>{{models.precio | currency}}</td>
+            <!-- currency: le pone el signo pesos y podemos configurar los decimales y demas -->
+            @if (models.stock > 0){
+            <td>{{models.stock}}</td>
+            <!-- creamos los eventos de sumar y restar cantidades, pasamos el objeto (models) del array en el que estamos parados y luego la funcion suma o resta de a uno  -->
+            <td>
+                <app-input-integer [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer><!-- pasamos el comonente al contenedor --><!-- el primer quantity se refiere al objeto que paso al contenedor hijo (<app-input-integer>) y el segundo quantity es el que viene desde el objeto del for... como no pasamos el objeto pasamos el max con el stock-->
+            </td>
+            <td>
+                <button class="btn btn-dark text-warning" (click)="addToCart(models)">Comprar</button>
+            </td>
+            } @else{
+            <td><span class="badge text-bg-warning">SIN STOCK</span></td>             
+            <td>
+                <app-input-integer [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-dark text-warning">Encargar</button>
+            </td>
+            }
+
+        </tr>
+        }@empty{
+        <tr>
+            <td colspan="4">No hay minipiscinas para mostrar</td>
+        </tr>
+        }
+    </tbody>
+</table>
