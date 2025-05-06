@@ -32,8 +32,8 @@
             </td>
             } @else{
             <td><span class="badge text-bg-warning">SIN STOCK</span></td>             
-            <td>
-                <app-input-integer [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer>
+            <td >
+                <app-input-integer class="d-none" [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer>
             </td>
             <td>
                 <button class="btn btn-dark text-warning">Encargar</button>

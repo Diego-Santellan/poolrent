@@ -1,1 +1,10 @@
-<h2>Carritos de compras</h2>
+<h3>Carritos de compras</h3>
+
+<ul>
+    <!-- recorre cada uno de los elementos del carrito  -->
+    @for (models of cartList$ | async; track models.modelo) {
+        <li>
+            {{models.modelo}}: {{models.quantity}}
+        </li>
+    }
+</ul>

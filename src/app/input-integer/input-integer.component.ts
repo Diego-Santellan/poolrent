@@ -10,13 +10,14 @@ import { Models } from '../models-list/Models';
 })
 
 export class InputIntegerComponent {
-
+  //el hijo recibe la info del papa con un input
   @Input() quantity!: number; /* SOLUCIONAR el ! */   /* el primer quantity es el que recibo de contenedor padre y el number es para decir como tratrlo*/
   @Input() max!: number; /* SOLUCIONAR  LO MISMO QUE ARRIBA */
 
   
   @Output() quantityChange: EventEmitter<number> = new EventEmitter<number>();
 
+  //el hijo emite un evento, para que el papa models-list.component lo campuro
   @Output() maxReached: EventEmitter<string> = new EventEmitter<string>();//evento para emitir que se alcanso el limite maximo
   
   /* creo un evento click donde si clickean en el boton mas quantity aumenta en uno */
