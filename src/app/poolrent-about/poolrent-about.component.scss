@@ -1,0 +1,130 @@
+.intro {
+  max-width: 100%;
+  display: flex;
+  margin: 10%;
+
+  .content {
+
+    h1 {
+      font-weight: 800;
+      text-transform: capitalize;
+
+    }
+
+    .btn-orange {
+      background-color: #FF5E2E;
+      text-transform: capitalize;
+
+    }
+  }
+
+  img {
+    width: 450px;
+    height: 300px;
+    border-radius: 25px;
+
+  }
+}
+
+.elegirnos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-transform: capitalize;
+
+  }
+
+  .beneficios {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px 0 0 0;
+
+    .beneficio-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .bi {
+        color: #FF5E2E;
+        min-height: 24px;
+        min-width: 24px;
+
+      }
+    }
+  }
+}
+
+.nuestros-modelos {
+  margin: 5% 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-transform: capitalize;
+
+  }
+
+  .modelos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px 0 0 0;
+
+    .modelo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 270px;
+        height: 180px;
+        border-radius: 10px;
+
+      }
+    }
+  }
+}
+
+.testimonio {
+  margin: 40px 20% 40px 20%;
+  padding: 1px 5px 1px 25px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #bbbbbb5b;
+  border-radius: 15px;
+
+  div {
+    margin: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input{
+      border: none;
+      border-radius: 10px;
+      height: 40px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+
+    }
+  }
+}
+
+.btn-orange {
+  background-color: #FF5E2E;
+  text-transform: capitalize;
+  
+}

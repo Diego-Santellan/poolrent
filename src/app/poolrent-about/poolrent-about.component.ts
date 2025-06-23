@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './poolrent-about.component.scss'
 })
 export class PoolrentAboutComponent {
-
+  email: String = 'info@poolrent.com'; 
 }

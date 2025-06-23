@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: String = 'Pool Rent'; 
+  email: String = 'info@poolrent.com'; 
 }

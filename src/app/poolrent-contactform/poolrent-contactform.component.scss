@@ -1,0 +1,68 @@
+.invalid input {
+  border: red solid 2px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input, textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #F9F9F9;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #FF5E2E;
+  outline: none;
+}
+
+button {
+  background-color: #FF5E2E;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #e94e20;
+}
+
+.invalid input, .invalid textarea {
+  border-color: #e74c3c;
+}
+
+.invalid label {
+  color: #e74c3c;
+}

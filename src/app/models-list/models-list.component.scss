@@ -1,17 +1,26 @@
-h1{
+h1 {
     text-transform: capitalize;
-    font-weight: 700;
-    color: orange;
+    color: #FF5E2E;
+    font-weight: 800;
 }
 
 //TABLA
-.promo{
-    border: 2px solid orange;    
-}
-.promo td{
-    background: rgb(244, 210, 146); 
-}
-.promo td{
-    background: rgb(244, 210, 146); 
+.promo {
+    border: 2px solid #FF5E2E;
 }
 
+.promo td {
+    background: rgb(244, 210, 146);
+}
+
+.promo td {
+    background: rgb(244, 210, 146);
+}
+
+table tbody tr td img {
+    width: 150px;
+    height: 150px;
+}
+.btn-orange{
+    background-color: #FF5E2E;
+}

@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PoolrentModelosComponent } from './poolrent-modelos/poolrent-modelos.component';
 import { PoolrentAboutComponent } from './poolrent-about/poolrent-about.component';
+import { PoolrentContactComponent } from './poolrent-contact/poolrent-contact.component';
 
 const routes: Routes = [
   {
     path: '',
     // component: PoolrentModelosComponent
-    redirectTo: 'modelos',
+    redirectTo: 'about',
     pathMatch: 'full'
   },
   {
@@ -17,7 +18,12 @@ const routes: Routes = [
   {
     path: 'about',
     component: PoolrentAboutComponent
-  }
+  },
+  {
+    path: 'contact',
+    component: PoolrentContactComponent
+  },
+
 ];
 
 @NgModule({

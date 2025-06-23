@@ -1,7 +1,47 @@
+nav.navbar-expand-lg {
+
+    div {
+        width: 100%;
+
+        .navbar-brand {
+            color: #FF5E2E;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        #navbarNav {
+            justify-content: flex-end;
+        }
+    }
+}
+
+main {
+    min-height: 65vh;
+}
+
 footer {
     // background: linear-gradient(to right, #ffffff, orange);
-    background: linear-gradient(135deg, #ffffff 0%, rgb(243, 191, 93) 70%, orange 100%);
+    // background: linear-gradient(135deg, #ffffff 0%, rgb(243, 191, 93) 70%, orange 100%);
+    // color: white;
+    border-top: #FF5E2E solid 5px;
 
-    color: white;
+    div {
+        div {
+            div {
+                h5 {
+                    font-family: 'Nunito', sans-serif;
+                    color: #FF5E2E;
+                }
+            }
+
+            svg.bi {
+                color: #FF5E2E;
+                min-height: 24px;
+                min-width: 24px;
+                
+            }
+        }
+    }
+
 }
-  

@@ -1,4 +1,4 @@
-<button class="btn btn-warning btn-sm" (click)="downQuantity()">-</button>
+<button type="button" class="btn-orange btn text-light  btn-sm" (click)="downQuantity()">-</button>
 
 <input 
     [min]="0" 
@@ -8,4 +8,4 @@
     (keyup)="changeQuantity($event)"
 >
 
-<button class="btn btn-warning btn-sm" (click)="upQuantity()">+</button>
+<button type="button"  class="btn-orange btn text-light  btn-sm" (click)="upQuantity()">+</button>

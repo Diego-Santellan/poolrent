@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Models } from './Models';
 import { ModelsCartService } from '../models-cart.service';
+import { ModelsDataService } from '../models-data.service';
+
 @Component({
   selector: 'app-models-list',
   standalone: false,
@@ -10,48 +12,18 @@ import { ModelsCartService } from '../models-cart.service';
 
 export class ModelsListComponent {
   //models es un atributo de la clase 
-  modelos: Models[] = [
-    {
-      modelo: 'Napoleon',
-      dimenciones: '3.10 x 2.30',
-      precio: 1900000,
-      image: 'img/napoleon.jpeg',
-      stock: 10,
-      promo: false,
-      quantity: 0,
-    },
-    {
-      modelo: 'Chavito',
-      dimenciones: '3.10 x 2.30',
-      precio: 1900000,
-      image: 'img/napoleon.jpeg',
-      stock: 0,
-      promo: false,
-      quantity: 0,
-    },
-    {
-      modelo: 'Frankling',
-      dimenciones: '4.10 x 2.50',
-      precio: 2500000,
-      image: 'img/napoleon.jpeg',
-      stock: 9,
-      promo: true,
-      quantity: 0,
-    },
-    {
-      modelo: 'Fraseo',
-      dimenciones: '5.10 x 3.30',
-      precio: 3000000,
-      image: 'img/napoleon.jpeg',
-      stock: 12,
-      promo: false,
-      quantity: 0,
-    }
-  ];
+  modelos: Models[] = [] ;
 
   
-  constructor(private cart: ModelsCartService){
+  constructor(
+    private cart: ModelsCartService,
+    private modelsDataService: ModelsDataService){
     // this.cart = new ModelsCartService();
+  }
+
+  ngOnInit(): void{//para deszplegar servicios o metodos al inicio del programa
+    this.modelsDataService.getAll()
+    .subscribe(modelos => this.modelos = modelos);
   }
 
   /* aviso de alcanzo el maximo por stock */

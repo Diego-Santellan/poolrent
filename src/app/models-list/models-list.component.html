@@ -16,7 +16,7 @@
         <!-- directivas-Estructurales:(ngFor) este caso es para remplazar el foreach -->
         <tr [ngClass]="{'promo': models.promo}">
             <!-- ngClass, para cuando se comple una condicion (models.promo = true), se le agrega una clase y con eso se le dan estilos -->
-            <td><img width="150" class="img-thumbnail" [src]="models.image" [alt]="models.image" /></td>
+            <td><img width="150px" class="img-thumbnail"  [src]="models.image" [alt]="models.image" loading="lazy"/></td>
             <td>{{models.modelo}}</td>
             <td>{{models.dimenciones}}</td>
             <td>{{models.precio | currency}}</td>
@@ -28,15 +28,15 @@
                 <app-input-integer [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer><!-- pasamos el comonente al contenedor --><!-- el primer quantity se refiere al objeto que paso al contenedor hijo (<app-input-integer>) y el segundo quantity es el que viene desde el objeto del for... como no pasamos el objeto pasamos el max con el stock-->
             </td>
             <td>
-                <button class="btn btn-dark text-warning" (click)="addToCart(models)">Comprar</button>
+                <button class="btn btn-orange text-light" (click)="addToCart(models)">Comprar</button>
             </td>
             } @else{
-            <td><span class="badge text-bg-warning">SIN STOCK</span></td>             
+            <td><span class="badge btn-orange text-light">SIN STOCK</span></td>             
             <td >
                 <app-input-integer class="d-none" [(quantity)]="models.quantity" [max]="models.stock" (maxReached)="maxReached($event)"></app-input-integer>
             </td>
             <td>
-                <button class="btn btn-dark text-warning">Encargar</button>
+                <button class="btn btn-orange text-light">Encargar</button>
             </td>
             }
 
