@@ -12,28 +12,31 @@ import { ModelsDataService } from '../models-data.service';
 
 export class ModelsListComponent {
   //models es un atributo de la clase 
-  modelos: Models[] = [] ;
+  modelos: Models[] = [];
 
-  
+
   constructor(
     private cart: ModelsCartService,
-    private modelsDataService: ModelsDataService){
+    private modelsDataService: ModelsDataService) {
     // this.cart = new ModelsCartService();
   }
 
-  ngOnInit(): void{//para deszplegar servicios o metodos al inicio del programa
+  ngOnInit(): void {//para deszplegar servicios o metodos al inicio del programa
     this.modelsDataService.getAll()
-    .subscribe(modelos => this.modelos = modelos);
+      .subscribe(modelos => this.modelos = modelos);
   }
 
   /* aviso de alcanzo el maximo por stock */
-  maxReached(m: string){
+  maxReached(m: string) {
     alert(m);
   }
 
   /* agregar al carrito */
-  addToCart(models: Models): void{
-    this.cart.addToCart(models);
+  addToCart(models: Models): void {
+    if (models.quantity != 0) {
+      this.cart.addToCart(models);
+    }
+
     models.stock -= models.quantity;
     models.quantity = 0;
   }

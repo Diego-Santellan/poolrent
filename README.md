@@ -1,59 +1,36 @@
-# Poolrent
+# 💦 Alquiler y Venta de Minipiscinas - Pool Rent
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Este proyecto fue desarrollado como parte del Trabajo Práctico Final del *Seminario Angular 2025*. La aplicación simula una plataforma de gestión de ventas para una empresa de alquiler y ventas de minipiscinas llamado **Pool Rent**.
 
-## Development server
 
-To start a local development server, run:
+## 👩‍💻 Datos del estudiante
 
-```bash
-ng serve
-```
+- *Nombre y Apellido:* Diego Nicolás Santellán
+- *DNI:* 43512939  
+- *Email:* diego.santellan2001@gmail.com  
+- *Sede:* Tandil  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Requerimientos mínimos  implementados 
+  - Ruteo: se Implementaron al menos dos secciones diferentes dentro de la aplicación, cada una con su propia ruta.
+    - *Ruteo:*  
+      - /modelos: muestra la lista de Minipiscinas.  
+      - /about: pagina de inicio.
+      - /contact: muestra los medios de contacto.
+  - Componentes: Se creo 3 páginas que incluya al menos dos componentes distintos.
+  - Se usaron interfaces y directivas o Control de Flujo en las plantillas HTML para controlar el flujo de la renderización.
+  - Se desarrolló comunicación entre componentes mediante el uso de @Input/@Output o a través de un servicio compartido.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 💡 Funcionalidades opcionales (Puntos extra)
 
-```bash
-ng generate component component-name
-```
+  -  Se consumió una API externa(MockAPI): Incluir un servicio que consuma una API externa utilizando el módulo HTTPClient de Angular.Especificamente se implementó una solicitud GET para obtener datos externos y mostrarlos en la interfaz.
+  
+  - Se implementó un formulario reactivo (Reactive Form) con validaciones. 
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Cómo probarlo
 
-```bash
-ng generate --help
-```
+- Repositorio GitHub: https://github.com/Diego-Santellan/poolrent
+- Proyecto en StackBlitz:
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📌 URL
+http://localhost:4200/about (home)

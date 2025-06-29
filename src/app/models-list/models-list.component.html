@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (models of modelos; track models.modelo){
+        @for (models of modelos; track models.id){
 
         <!-- directivas-Estructurales:(ngFor) este caso es para remplazar el foreach -->
         <tr [ngClass]="{'promo': models.promo}">

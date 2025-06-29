@@ -6,4 +6,5 @@ export interface Models{
     stock: number;
     promo: boolean;
     quantity: number;
+    id:number;
 }
